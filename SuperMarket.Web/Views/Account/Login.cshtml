@@ -1,0 +1,25 @@
+﻿@model UserLoginDto
+@{
+    Layout = "_LoginLayout";
+}
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="input-group mb-3">
+        <input asp-for="FirstName" type="text" class="form-control" placeholder="Name">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="input-group mb-3">
+        <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="row">
+        <div class="col-8">
+
+        </div>
+        <!-- /.col -->
+        <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+        </div>
+        <!-- /.col -->
+    </div>
+</form>
